@@ -1,6 +1,4 @@
 return {
-  "nvim-lua/plenary.nvim",
-
   {
     "nvchad/base46",
     build = function()
@@ -15,10 +13,6 @@ return {
       require "nvchad"
     end,
   },
-
-  "nvzone/volt",
-  "nvzone/menu",
-  { "nvzone/minty", cmd = { "Huefy", "Shades" } },
 
   {
     "nvim-tree/nvim-web-devicons",
@@ -47,23 +41,6 @@ return {
   },
 
   -- file managing , picker etc
-  {
-    "nvim-tree/nvim-tree.lua",
-    cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-    opts = function()
-      return require "nvchad.configs.nvimtree"
-    end,
-  },
-
-  {
-    "folke/which-key.nvim",
-    keys = { "<leader>", "<c-w>", '"', "'", "`", "c", "v", "g" },
-    cmd = "WhichKey",
-    opts = function()
-      dofile(vim.g.base46_cache .. "whichkey")
-      return {}
-    end,
-  },
   -- lsp stuff
   {
     "mason-org/mason.nvim",
@@ -127,13 +104,4 @@ return {
     end,
   },
 
-  {
-    "nvim-treesitter/nvim-treesitter",
-    event = { "BufReadPost", "BufNewFile" },
-    cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
-    build = ":TSUpdate | TSInstallAll",
-    opts = function()
-      return require "nvchad.configs.treesitter"
-    end,
-  },
 }
