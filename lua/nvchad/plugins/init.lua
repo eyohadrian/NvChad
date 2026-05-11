@@ -64,24 +64,6 @@ return {
       return {}
     end,
   },
-
-  -- formatting!
-  {
-    "stevearc/conform.nvim",
-    opts = {
-      formatters_by_ft = { lua = { "stylua" } },
-    },
-  },
-
-  -- git stuff
-  {
-    "lewis6991/gitsigns.nvim",
-    event = "User FilePost",
-    opts = function()
-      return require "nvchad.configs.gitsigns"
-    end,
-  },
-
   -- lsp stuff
   {
     "mason-org/mason.nvim",
